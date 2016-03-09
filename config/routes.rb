@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root to: "users#index"
   get "/users" => "users#index"
+  get "/edit" => "profiles#edit"
   
 
 

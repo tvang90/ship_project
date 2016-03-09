@@ -1,0 +1,6 @@
+<%= form_for Profile.find(session[:id]), :method :PUT do |f| %>
+<%= f.text_field :fname %>
+<%= f.text_field :lname %>
+<%= f.text_field :job_title %>
+<%= f.submit "Confirm edit" %>
+<% end %>

@@ -1,19 +1,19 @@
-<%= form_for @profile do |f| %>
+<%= form_for :profile, url: "/profiles" do |f| %>
 
 
-<div class="field">
-  <%= f.label :fname %><br>
-  <%= f.text_field :fname %>
-</div>
-<div class="field">
-  <%= f.label :lname %><br>
-  <%= f.text_field :lname %>
-</div>
+  <div class="field">
+    <%= f.label :fname %><br>
+    <%= f.text_field :fname %>
+  </div>
+  <div class="field">
+    <%= f.label :lname %><br>
+    <%= f.text_field :lname %>
+  </div>
 
-<div class="field">
-  <%= f.label :job_title %><br>
-  <%= f.text_field :job_title %>
-</div>
-<div class="actions">
-<%= f.submit %>
+  <div class="field">
+    <%= f.label :job_title %><br>
+    <%= f.text_field :job_title %>
+  </div>
+  <div class="actions">
+  <%= f.submit %>
 <% end %>
