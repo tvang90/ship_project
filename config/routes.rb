@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
 
   devise_for :users
+  # devise_for :profiles, :controllers => { :registrations => "profiles" }
+
 
   resources :profiles
   resources :jobs
