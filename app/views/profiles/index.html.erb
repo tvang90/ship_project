@@ -2,5 +2,8 @@
   <% @profiles.each do |profile| %>
     <li><%= profile.fname %></li>
     <li><%= profile.lname %></li>
+    <li><%= profile.job_title %></li>
+    <%= link_to "Update Your Profile", edit_profile_path(profile) %>
   <% end %>
 </ul>
+

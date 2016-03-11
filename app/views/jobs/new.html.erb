@@ -1,0 +1,31 @@
+<%= form_for :job, url: "/jobs" do |f| %>
+
+
+  <div class="field">
+    <%= f.label "Job name" %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label "Cargo description" %><br>
+    <%= f.text_field :cargo %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Cost" %><br>
+    <%= f.number_field :cost %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Origin" %><br>
+    <%= f.text_field :origin%>
+  </div>
+
+  <div class="field">
+    <%= f.label "Destination" %><br>
+    <%= f.text_field :destination %>
+  </div>
+
+
+  <div class="actions">
+  <%= f.submit %>
+<% end %>
