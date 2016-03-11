@@ -3,7 +3,9 @@
     <li><%= profile.fname %></li>
     <li><%= profile.lname %></li>
     <li><%= profile.job_title %></li>
-    <%= link_to "Update Your Profile", edit_profile_path(profile) %>
+    <li><%= link_to "Update Your Profile", edit_profile_path(profile) %></li>
+    <li><%= link_to "Delete Profile", profile_path(profile), method: :delete %></li>
+
   <% end %>
 </ul>
 
