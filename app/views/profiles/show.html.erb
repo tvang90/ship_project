@@ -1,6 +1,11 @@
-<%= @profile.fname %>
-<%= @profile.lname %>
-<%= @profile.job_title %>
-<%= image_tag @profile.image.url(:medium) %>
+<h1>Profile</h1>
+
+<div class="field">
+	<h3>Name</h3>
+	<%= @profile.fname %>
+	<%= @profile.lname %><br>
+	<%= @profile.job_title %><br>
+	<%= image_tag @profile.image.url(:medium) %>
+</div>
 
 
