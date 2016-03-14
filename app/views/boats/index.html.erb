@@ -2,8 +2,9 @@
   <% @boats.each do |boat| %>
     <p>  
       <li>Boat Name: <%= boat.name %></li>
-      <li>Location: <%= boat.location %></li>
       <li>Containers: <%= boat.containers %></li>
     </p>
   <% end %>
+
+  <%= link_to "Add a Boat?", new_boat_path %>
 </ul>

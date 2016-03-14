@@ -1,0 +1,15 @@
+<%= form_for :boat, url: "/boats" do |f| %>
+
+
+  <div class="field">
+    <%= f.label "Boat Name" %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label "How Many Containers?" %><br>
+    <%= f.text_field :containers %>
+  </div>
+  
+  <div class="actions">
+  <%= f.submit %>
+<% end %>

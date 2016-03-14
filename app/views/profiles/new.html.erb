@@ -1,1 +1,19 @@
-asdgdfacfsd
+<%= form_for :profile, url: "/profiles" do |f| %>
+
+
+  <div class="field">
+    <%= f.label "First Name" %><br>
+    <%= f.text_field :fname %>
+  </div>
+  <div class="field">
+    <%= f.label "Last Name" %><br>
+    <%= f.text_field :lname %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Job Title" %><br>
+    <%= f.text_field :job_title %>
+  </div>
+  <div class="actions">
+  <%= f.submit %>
+<% end %>

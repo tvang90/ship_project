@@ -16,13 +16,12 @@
 
 li {
   list-style-type: none;
-
-  
+  text-decoration: none;
 }
 
 nav li {
   display: inline;
-  
+
 }
 
 a {

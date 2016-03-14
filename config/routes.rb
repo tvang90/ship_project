@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
   root to: "users#index"
-  get "/users" => "user#index"
-  get "/profiles/edit" => "profiles#edit"
+  get "/users" => "users#index"
+  get "/profile/edit" => "profiles#edit"
+
   
 
 
   devise_for :users
+  # devise_for :profiles, :controllers => { :registrations => "profiles" }
+
 
   resources :profiles
   resources :jobs
