@@ -17,12 +17,12 @@
 
   <div class="field">
     <%= f.label "Origin" %><br>
-    <%= f.text_field :origin%>
+    <%= f.select(:origin, '<option value="New York">New York</option><option value="Michigan">Michigan</option>'.html_safe) %>
   </div>
 
   <div class="field">
     <%= f.label "Destination" %><br>
-    <%= f.text_field :destination %>
+    <%= f.select(:destination, '<option value="New York">New York</option><option value="Michigan">Michigan</option>'.html_safe) %>
   </div>
 
 
