@@ -1,10 +1,10 @@
 <%= form_for :job, url: "/jobs" do |f| %>
 
-
   <div class="field">
     <%= f.label "Job name" %><br>
     <%= f.text_field :name %>
   </div>
+  
   <div class="field">
     <%= f.label "Cargo description" %><br>
     <%= f.text_field :cargo %>
@@ -17,14 +17,13 @@
 
   <div class="field">
     <%= f.label "Origin" %><br>
-    <%= f.select(:origin, '<option value="New York">New York</option><option value="Michigan">Michigan</option>'.html_safe) %>
+    <%= f.select(:origin, '<option value="Chaos Garden">Chaos Garden</option><option value="Green Hill Zone">Green Hill Zone</option><option value="Eggman Empire">Eggman Empire</option><option value="The Outlands">The Outlands</option><option value="Gaia Temple">Gaia Temple</option>'.html_safe) %>
   </div>
 
   <div class="field">
     <%= f.label "Destination" %><br>
-    <%= f.select(:destination, '<option value="New York">New York</option><option value="Michigan">Michigan</option>'.html_safe) %>
+    <%= f.select(:destination, '<option value="Chaos Garden">Chaos Garden</option><option value="Green Hill Zone">Green Hill Zone</option><option value="Eggman Empire">Eggman Empire</option><option value="The Outlands">The Outlands</option><option value="Gaia Temple">Gaia Temple</option>'.html_safe) %>
   </div>
-
 
   <div class="actions">
   <%= f.submit %>
