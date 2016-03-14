@@ -5,7 +5,16 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_one :profile
-  has_many :boats
   has_many :jobs
+  has_many :follows
+  has_many :boats, through: :follows
+
+   def following?(boat)
+    boat.followers.find_by(id: id).present?
+   end
+
+  # def follows
+  #   boats
+  # end
 
 end
