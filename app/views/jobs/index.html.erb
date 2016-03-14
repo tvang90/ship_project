@@ -5,6 +5,7 @@
     <li>Cost: $<%= job.cost %></li>
     <li>Origin: <%= job.origin %></li>
     <li>Destination: <%= job.destination %></li>
+    <li><%= link_to "Delete Job", job_path(job), method: :delete %></li>
   <% end %>
 </ul>
 

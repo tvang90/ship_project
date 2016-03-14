@@ -3,6 +3,7 @@
     <p>  
       <li>Boat Name: <%= boat.name %></li>
       <li>Containers: <%= boat.containers %></li>
+      <li><%= link_to "Delete Boat", boat_path(boat), method: :delete %></li>
     </p>
   <% end %>
 
