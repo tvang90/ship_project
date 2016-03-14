@@ -1,10 +1,11 @@
+<h1>Boats</h1>
+
 <ul>
   <% @boats.each do |boat| %>
-    <p>  
       <li>Boat Name: <%= boat.name %></li>
       <li>Containers: <%= boat.containers %></li>
+      <li>Boat Image: <%= image_tag boat.image.url(:medium) %></li>
       <li><%= link_to "Delete Boat", boat_path(boat), method: :delete %></li>
-    </p>
   <% end %>
 
   <%= link_to "Add a Boat?", new_boat_path %>
