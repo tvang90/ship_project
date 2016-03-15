@@ -25,7 +25,7 @@ class BoatsController < ApplicationController
 
   def boat_follow
     respond_to do |format|
-      format.js
+      format.js 
     end
   end
 

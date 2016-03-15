@@ -9,9 +9,7 @@ class User < ActiveRecord::Base
   has_many :follows
   has_many :boats, through: :follows
 
-   def following?(boat)
-    boat.followers.find_by(id: id).present?
-   end
+  
 
   # def follows
   #   boats
