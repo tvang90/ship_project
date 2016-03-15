@@ -1,1 +1,3 @@
-Welcome, <%= @user.email %>!
+Welcome, <%= @current_user.name %> <br>
+<%= image_tag @user.image.url(:medium) %><br>
+<%= link_to "Edit Account", :edit_user_registration %>

@@ -14,5 +14,10 @@ class UsersController < ApplicationController
     redirect_to "http://www.facebook.com"
   end
 
-end
+  private
+    def users_params
+      params.require(:sign_up).permit(:name, :job_title, :image)
+    end
+ end
+
 
