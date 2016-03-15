@@ -2,6 +2,9 @@ class FollowsController < ApplicationController
   def create
     @follower = Follow.create(follow_params)
   end
+
+  def show
+  end
    
 
 
