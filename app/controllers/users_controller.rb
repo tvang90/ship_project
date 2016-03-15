@@ -17,5 +17,12 @@ class UsersController < ApplicationController
   def unfollow
     follows.find_by(boat_id: boat.id).destroy
   end
-end
+
+  private
+    def users_params
+      params.require(:sign_up).permit(:name, :job_title, :image)
+    end
+ end
+
+
 
