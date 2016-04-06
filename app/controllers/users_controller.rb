@@ -10,9 +10,19 @@ class UsersController < ApplicationController
     @current_user = @user
   end
 
-  def after_sign_up_path_for(resource_or_scope)
-    redirect_to "http://www.facebook.com"
+  def follow
+    follows.create(boat_id: boat.id)
   end
 
-end
+  def unfollow
+    follows.find_by(boat_id: boat.id).destroy
+  end
+
+  private
+    def users_params
+      params.require(:sign_up).permit(:name, :job_title, :image)
+    end
+ end
+
+
 

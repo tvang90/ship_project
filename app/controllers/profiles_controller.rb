@@ -8,6 +8,7 @@ class ProfilesController < ApplicationController
 
   def show
     @profile = Profile.find(params[:id])
+ 
   end
   
   def create
@@ -41,6 +42,6 @@ class ProfilesController < ApplicationController
   private
 
   def profile_params
-    params.require(:profile).permit(:fname, :lname, :job_title)
+    params.require(:profile).permit(:fname, :lname, :job_title, :image)
   end
 end
