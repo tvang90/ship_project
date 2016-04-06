@@ -5,6 +5,9 @@
       <li>Boat Name: <%= boat.name %></li>
       <li>Containers: <%= boat.containers %></li>
       <li>Boat Image: <%= image_tag boat.image.url(:medium) %></li>
+      <div id="boats"><li><%= link_to "Follow", follows_path(follow: {boat_id: boat.id, user_id: current_user.id}), method: :post, remote: true,
+        confirm: "Are you sure you want to follow this boat?" %></li>
+      </div>
       <li><%= link_to "Delete Boat", boat_path(boat), method: :delete %></li>
   <% end %>
 

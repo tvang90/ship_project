@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   # devise_for :profiles, :controllers => { :registrations => "profiles" }
 
 
+  resources :follows, :only => [:create, :destroy]
   resources :profiles
   resources :jobs
   resources :boats
