@@ -32,6 +32,13 @@ ActiveRecord::Schema.define(version: 20160315000723) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "follows", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "boat_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "jobs", force: :cascade do |t|
     t.integer  "containers"
     t.text     "cargo"
