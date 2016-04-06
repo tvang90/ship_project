@@ -1,5 +1,7 @@
+
 <ul>
   <li>Boat Name: <%= @boat.name %></li>
   <li>Location: <%= @boat.location %></li>
   <li>Containers: <%= @boat.containers %></li>
+  <li>Boat: <br> <%= image_tag @boat.image.url(:medium) %></li>
 </ul>

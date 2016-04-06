@@ -1,7 +1,30 @@
 <%= form_for @profile do |f| %>
-<%= f.text_field :fname %>
-<%= f.text_field :lname %>
-<%= f.text_field :job_title %>
-<%= f.file_field :image %>
-<%= f.submit "Confirm edit" %>
+
+<div class="field">
+	<%= f.label "First Name" %><br>
+	<%= f.text_field :fname %>
+</div>
+
+<div class="field">
+	<%= f.label "Last Name" %><br>
+	<%= f.text_field :lname %>
+</div>
+
+<div class="field">
+	<%= f.label "Job Title" %><br>
+	<%= f.text_field :job_title %>
+</div>
+
+<div class="field">
+	<%= f.label "Profile Image" %><br>
+	<%= f.file_field :image %><br>
+	<%= image_tag @profile.image.url(:medium) %>
+</div>
+
+<div class="field">
+	<%= f.submit "Confirm edit" %>
+</div>
+
+
+
 <% end %>

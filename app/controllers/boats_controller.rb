@@ -23,10 +23,16 @@ class BoatsController < ApplicationController
     redirect_to boats_path
   end
 
+  def boat_follow
+    respond_to do |format|
+      format.js 
+    end
+  end
+
   private
 
   def boat_params
-    params.require(:boat).permit(:name, :containers)
+    params.require(:boat).permit(:name, :containers, :image)
   end
 
 

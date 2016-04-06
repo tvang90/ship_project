@@ -1,5 +1,8 @@
 <% @users.each do |user| %>
   <p>
-    <%= user.email %>
+    <%= user.name %><br>
+    <%= user.job_title %><br>  
+    <%= user.email %><br>
+    <%= image_tag user.image.url(:small) %><br>
   </p>
 <% end %>
