@@ -1,3 +1,5 @@
-$(document).ajaxComplete(function) {
-  $("#boats").alert("You are now following this boat!")
+$(document).ready(){
+  $(".follow-boat").on("ajax:complete", function(e){
+    $(e.currentTarget).alert("You are now following this boat!")
+  };
 };
