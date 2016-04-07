@@ -4,6 +4,7 @@ class BoatsController < ApplicationController
   end
 
   def new
+    @new_boat = Boat.new
   end
 
   def create
@@ -15,6 +16,8 @@ class BoatsController < ApplicationController
 
   def show
     @boat = Boat.find(params[:id])
+    # @boats_jobs = @boat.boats_jobs
+    # @current_user = User.find(current_user.id)
   end
 
   def destroy
@@ -32,7 +35,7 @@ class BoatsController < ApplicationController
   private
 
   def boat_params
-    params.require(:boat).permit(:name, :containers, :image)
+    params.require(:boat).permit(:name, :location, :containers, :image)
   end
 
 

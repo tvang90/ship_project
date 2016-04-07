@@ -3,7 +3,11 @@
 
   <div class="field">
     <%= f.label "Boat Name" %><br>
-    <%= f.text_field :name %>
+    <%= f.select(:name, '<option value="SS Sonic">SS Sonic</option><option value="SS Tails">SS Tailse</option><option value="SS Knuckles">SS Knuckles</option><option value="SS Eggman">SS Eggman</option><option value="SS Shadow">SS Shadow</option>'.html_safe) %>
+  </div>
+  <div class="field">
+    <%= f.label "Location" %><br>
+    <%= f.select(:location, '<option value="Chaos Garden">Chaos Garden</option><option value="Green Hill Zone">Green Hill Zone</option><option value="Eggman Empire">Eggman Empire</option><option value="The Outlands">The Outlands</option><option value="Gaia Temple">Gaia Temple</option>'.html_safe) %>
   </div>
   <div class="field">
     <%= f.label "How Many Containers?" %><br>

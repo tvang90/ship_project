@@ -1,5 +1,5 @@
 class Boat < ActiveRecord::Base
-  has_many :jobs
+  has_many :jobs, dependent: :destroy
   has_many :follows
   has_many :users, through: :follows
 

@@ -12,8 +12,12 @@ Rails.application.routes.draw do
 
   resources :follows, :only => [:create, :destroy]
   resources :profiles
+
+  resources :boats do
+    resources :jobs
+  end
+  
   resources :jobs
-  resources :boats
   resources :users, only: [:show]
 
   # The priority is based upon order of creation: first created -> highest priority.

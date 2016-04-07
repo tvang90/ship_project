@@ -1,5 +1,6 @@
 class JobsController < ApplicationController
   def new
+     @boat = Boat.find(params[:boat_id])
   end
 
   def index
@@ -7,10 +8,19 @@ class JobsController < ApplicationController
   end
 
   def create
-    @job = Job.new(job_params)
+    # @boat = Boat.where(boat_id: params[:id])
+    @job = Job.create(job_params)
+    # @job.boat_id = @boat.id
 
-    @job.save
-    redirect_to users_path
+    # @job = @boat.Job.create(job_params)
+    # @job.user_id = current_user.id
+    if @job.save
+      redirect_to boats_path
+    else
+      flash.now[:alert] = "Sorry, an error has occurred. Please try again"
+      render :new
+    end
+
   end
 
   def show
@@ -26,6 +36,6 @@ class JobsController < ApplicationController
   private
 
   def job_params
-    params.require(:job).permit(:name, :cargo, :cost, :origin, :destination)
+    params.require(:job).permit(:name, :cargo, :cost, :origin, :destination, :boat_id)
   end
 end

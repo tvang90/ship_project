@@ -16,12 +16,14 @@ class FollowsController < ApplicationController
     current_user.unfollow(user)
     redirect_to user
   end
-end
+
 
   private
-  
+
   def follow_params 
     params.require(:follow).permit(:boat_id, :user_id)
   end 
+
+end
 
 
