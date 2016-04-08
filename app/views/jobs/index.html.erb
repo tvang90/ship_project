@@ -1,13 +1,20 @@
-<ul>
-  <% @jobs.each do |job| %>
-    <li>Job Name: <%= job.name %></li>
-    <li>Cargo Description: <%= job.cargo %></li>
-    <li>Cost: $<%= job.cost %></li>
-    <li>Origin: <%= job.origin %></li>
-    <li>Destination: <%= job.destination %></li>
-    <li><%= link_to "Assign a Boat", boats_path %></li>
-    <li><%= link_to "Delete Job", job_path(job), method: :delete %></li>
-  <% end %>
-</ul>
+<h1>Jobs</h1>
 
 <%= link_to "Add a Job?", new_job_path %>
+
+<div class="jobDisplay">
+  <ul>
+    <% @jobs.each do |job| %>
+      <li>Job Name: <%= job.name %></li>
+      <li>Cargo Description: <div id="cargo"><%= job.cargo %></div></li>
+      <li>Cost: $<%= job.cost %></li>
+      <li>Origin: <%= job.origin %></li>
+      <li>Destination: <%= job.destination %></li>
+    <div class="jobLinks">
+      <li><%= link_to "Assign a Boat", boats_path %></li>
+      <li><%= link_to "Delete Job", job_path(job), method: :delete %></li>
+    </div><br><br><br>
+    <% end %>
+  </ul>
+</div>
+

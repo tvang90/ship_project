@@ -1,3 +1,30 @@
-// Place all the styles related to the boats controller here.
+// Placse all the styles related to the boats controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.boatLinks li {
+  float: left;
+  margin-right: 5px;
+}
+
+a {
+  text-decoration: none;
+
+}
+
+a:hover {
+  color: red;
+}
+
+.boatDisplay {
+  margin-bottom: 10px;
+}
+
+h1 {
+  text-align: center;
+}
+
+#cargoDisplay {
+  width: 150px;
+  display: block;
+}
