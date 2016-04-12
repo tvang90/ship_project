@@ -26,16 +26,19 @@ ActiveRecord::Schema.define(version: 20160407200556) do
     t.integer  "job_id"
   end
 
+  create_table "followers", force: :cascade do |t|
+    t.integer  "follower"
+    t.integer  "followee"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "follows", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "boat_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-
-  add_index "follows", ["boat_id"], name: "index_follows_on_boat_id"
-  add_index "follows", ["user_id", "boat_id"], name: "index_follows_on_user_id_and_boat_id", unique: true
-  add_index "follows", ["user_id"], name: "index_follows_on_user_id"
 
   create_table "jobs", force: :cascade do |t|
     t.integer  "containers"

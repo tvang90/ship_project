@@ -3,7 +3,11 @@ class Boat < ActiveRecord::Base
   has_many :follows
   has_many :users, through: :follows
 
- 
+
+
+  def followers
+    users
+  end
  
 
   # has many users, users have many boats

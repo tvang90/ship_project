@@ -9,6 +9,21 @@ class User < ActiveRecord::Base
   has_many :follows
   has_many :boats, through: :follows
 
+  def follow(boat)
+    follows.create(boat_id: boat.id)
+  end
+
+  def unfollow(boat)
+    follows.find_by(boat_id: boat.id).destroy
+  end
+
+  def following?(boat)
+    boat.followers.find_by(id: id).present?
+  end
+
+  def follows
+    boats
+  end
   
 
   # def follows

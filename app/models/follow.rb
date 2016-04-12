@@ -1,4 +1,6 @@
 class Follow < ActiveRecord::Base
-  has_many :users
-  has_many :boats
+  belongs_to :user
+  belongs_to :boats
+
+  validates_presence_of :boat_id
 end
