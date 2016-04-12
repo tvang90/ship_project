@@ -14,13 +14,38 @@
  *= require_self
  */
 
+body{
+	background-color: #087E8B;
+	font-family: 'ABeeZee', sans-serif;
+	color: 253031;
+}
+header{
+	background-color: #AC80A0;
+	margin: 0 100px 0 100px;
+}
+
+h1{
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 60px;
+}
+
 li {
   list-style-type: none;
   text-decoration: none;
 }
 
+nav{
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 20px;
+}
+
+
 nav li {
   display: inline;
+  padding: 30px;
+
 
 }
 

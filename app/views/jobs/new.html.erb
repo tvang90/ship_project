@@ -1,5 +1,3 @@
-
-
 <%= form_for :job, url: "/jobs" do |f| %>
 
   <div class="field">
@@ -9,7 +7,7 @@
   
   <div class="field">
     <%= f.label "Cargo description" %><br>
-    <%= f.text_field :cargo, :minlength => 50 %>
+    <%= f.text_area :cargo, :minlength => 50 %>
   </div>
 
   <div class="field">
@@ -30,7 +28,6 @@
     <%= f.label "Destination" %><br>
     <%= f.select(:destination, '<option value="Chaos Garden">Chaos Garden</option><option value="Green Hill Zone">Green Hill Zone</option><option value="Eggman Empire">Eggman Empire</option><option value="The Outlands">The Outlands</option><option value="Gaia Temple">Gaia Temple</option>'.html_safe) %>
   </div>
-
 
   <div class="actions">
   <%= f.submit %>

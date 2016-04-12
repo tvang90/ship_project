@@ -2,6 +2,8 @@
 <html>
 <head>
   <title>Shipping</title>
+  <link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
+ <link href='https://fonts.googleapis.com/css?family=Ubuntu:400italic' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -10,6 +12,7 @@
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
 
+<header>
   <% if user_signed_in? %>
     <nav>  
       <li><%= link_to("Boats", boats_path) %></li>
@@ -19,6 +22,7 @@
       <li><%= link_to("Log Out", destroy_user_session_path, :method => :delete) %></li>
     </nav>
   <% end %>
+</header>
 
 
 <%= yield %>

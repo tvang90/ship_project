@@ -1,6 +1,6 @@
 <%= render "follows" %>
 
-Welcome, <%= @current_user.name %> <br>
+<h1>Welcome, <%= @current_user.name %></h1> <br>
 <%= image_tag @user.image.url(:medium) %><br>
 <%= link_to "Edit Account", :edit_user_registration %>
 
